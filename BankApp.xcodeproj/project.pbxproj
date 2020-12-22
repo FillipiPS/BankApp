@@ -15,6 +15,7 @@
 		5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45547925916E1600433AC6 /* URL+Extenstions.swift */; };
 		5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45547C25916F3500433AC6 /* View+Extension.swift */; };
 		5B455481259170E000433AC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B455480259170E000433AC6 /* Account.swift */; };
+		5B4554852591732E00433AC6 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4554842591732E00433AC6 /* AccountService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5B45547925916E1600433AC6 /* URL+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extenstions.swift"; sourceTree = "<group>"; };
 		5B45547C25916F3500433AC6 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		5B455480259170E000433AC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		5B4554842591732E00433AC6 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		5B45546425915E5C00433AC6 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				5B4554872591733F00433AC6 /* Services */,
 				5B45547F2591709600433AC6 /* Models */,
 				5B455475259164EC00433AC6 /* Extensions */,
 				5B45546525915E5C00433AC6 /* BankAppApp.swift */,
@@ -95,6 +98,14 @@
 				5B455480259170E000433AC6 /* Account.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5B4554872591733F00433AC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B4554842591732E00433AC6 /* AccountService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			files = (
 				5B4554772591650800433AC6 /* Double+Extensions.swift in Sources */,
 				5B45546825915E5C00433AC6 /* ContentView.swift in Sources */,
+				5B4554852591732E00433AC6 /* AccountService.swift in Sources */,
 				5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */,
 				5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */,
 				5B45546625915E5C00433AC6 /* BankAppApp.swift in Sources */,
