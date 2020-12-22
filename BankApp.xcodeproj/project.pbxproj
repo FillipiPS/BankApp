@@ -13,6 +13,7 @@
 		5B45546D25915E6200433AC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B45546C25915E6200433AC6 /* Preview Assets.xcassets */; };
 		5B4554772591650800433AC6 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4554762591650800433AC6 /* Double+Extensions.swift */; };
 		5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45547925916E1600433AC6 /* URL+Extenstions.swift */; };
+		5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45547C25916F3500433AC6 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5B45546E25915E6200433AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4554762591650800433AC6 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		5B45547925916E1600433AC6 /* URL+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extenstions.swift"; sourceTree = "<group>"; };
+		5B45547C25916F3500433AC6 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				5B4554762591650800433AC6 /* Double+Extensions.swift */,
 				5B45547925916E1600433AC6 /* URL+Extenstions.swift */,
+				5B45547C25916F3500433AC6 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				5B4554772591650800433AC6 /* Double+Extensions.swift in Sources */,
 				5B45546825915E5C00433AC6 /* ContentView.swift in Sources */,
+				5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */,
 				5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */,
 				5B45546625915E5C00433AC6 /* BankAppApp.swift in Sources */,
 			);
