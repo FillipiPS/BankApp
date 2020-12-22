@@ -12,17 +12,9 @@ struct AccountListView: View {
 
     var body: some View {
         List(accounts, id: \.accountId) { account in
-            HStack {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(account.name)
-                        .font(.headline)
-                    Text(account.accountType)
-                        .opacity(0.5)
-                }
-                Spacer()
-                Text("\(account.balance.formarAsCurrency())")
-                    .foregroundColor(.green)
-            }
+            AccountCell(account: account)
+        }.onAppear {
+            UITableView.appearance().backgroundColor = .clear
         }
     }
 }
@@ -32,5 +24,23 @@ struct AccountListView_Previews: PreviewProvider {
         let account = Account(id: UUID(uuidString: "c9c547ad-9d04-4ab8-a4fb-222f5135e2fa")!, name: "Me", accountType: .checking, balance: 1212.12)
         
         AccountListView(accounts: [AccountViewModel(account: account)])
+    }
+}
+
+struct AccountCell: View {
+    let account: AccountViewModel
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(account.name)
+                    .font(.headline)
+                Text(account.accountType)
+                    .opacity(0.5)
+            }
+            Spacer()
+            Text("\(account.balance.formarAsCurrency())")
+                .foregroundColor(.green)
+        }
     }
 }

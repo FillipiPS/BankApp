@@ -12,13 +12,19 @@ struct AccountSummaryScreen: View {
 
     var body: some View {
         VStack {
-            AccountListView(accounts: accountSummaryVM.accounts)
-            Text("\(accountSummaryVM.total.formarAsCurrency())")
+            GeometryReader { g in
+                VStack {
+                    AccountListView(accounts: accountSummaryVM.accounts)
+                        .frame(height: g.size.height/2)
+                    Text("\(accountSummaryVM.total.formarAsCurrency())")
+                }
+            }
         }
         .onAppear(perform: {
             self.accountSummaryVM.getAllAccounts()
-    })
-
+        })
+        .navigationBarTitle("Account Summary")
+        .embedInNavigationView()
     }
 }
 
