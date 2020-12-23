@@ -16,6 +16,8 @@
 		5B455481259170E000433AC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B455480259170E000433AC6 /* Account.swift */; };
 		5B4554852591732E00433AC6 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4554842591732E00433AC6 /* AccountService.swift */; };
 		5B45548C25917E9500433AC6 /* AccountSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45548B25917E9500433AC6 /* AccountSummaryViewModel.swift */; };
+		5B6916852592C9F700556AAB /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6916842592C9F600556AAB /* CreateAccountRequest.swift */; };
+		5B6916882592CB7B00556AAB /* CreateAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6916872592CB7B00556AAB /* CreateAccountResponse.swift */; };
 		5BEF1321259221CE00AFF87F /* AccountSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF1320259221CE00AFF87F /* AccountSummaryScreen.swift */; };
 		5BEF1326259226CB00AFF87F /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF1325259226CB00AFF87F /* AccountListView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		5B455480259170E000433AC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		5B4554842591732E00433AC6 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		5B45548B25917E9500433AC6 /* AccountSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewModel.swift; sourceTree = "<group>"; };
+		5B6916842592C9F600556AAB /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
+		5B6916872592CB7B00556AAB /* CreateAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountResponse.swift; sourceTree = "<group>"; };
 		5BEF1320259221CE00AFF87F /* AccountSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryScreen.swift; sourceTree = "<group>"; };
 		5BEF1325259226CB00AFF87F /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				5B455480259170E000433AC6 /* Account.swift */,
+				5B6916842592C9F600556AAB /* CreateAccountRequest.swift */,
+				5B6916872592CB7B00556AAB /* CreateAccountResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,11 +217,13 @@
 				5BEF1321259221CE00AFF87F /* AccountSummaryScreen.swift in Sources */,
 				5B4554772591650800433AC6 /* Double+Extensions.swift in Sources */,
 				5B4554852591732E00433AC6 /* AccountService.swift in Sources */,
+				5B6916882592CB7B00556AAB /* CreateAccountResponse.swift in Sources */,
 				5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */,
 				5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */,
 				5B45546625915E5C00433AC6 /* BankAppApp.swift in Sources */,
 				5B455481259170E000433AC6 /* Account.swift in Sources */,
 				5B45548C25917E9500433AC6 /* AccountSummaryViewModel.swift in Sources */,
+				5B6916852592C9F700556AAB /* CreateAccountRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
