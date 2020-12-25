@@ -42,7 +42,7 @@ class AccountService {
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("aplication/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONEncoder().encode(createAccountRequest)
 
         URLSession.shared.dataTask(with: request) { (data, response, error) in
