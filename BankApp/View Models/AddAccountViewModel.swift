@@ -35,7 +35,7 @@ extension AddAccountViewModel {
         if !isBalanceValid {
             errors.append("Balance is not valid")
         }
-        if errors.isEmpty {
+        if !errors.isEmpty {
             self.errorMessage = errors.joined(separator: "\n")
             return false
         }
@@ -52,7 +52,19 @@ extension AddAccountViewModel {
 
         let createAccountReq = CreateAccountRequest(name: name, accountType: accountType.title, balance: Double(balance)!)
         AccountService.shared.createAccount(createAccountRequest: createAccountReq) { (result) in
-            //TODO
+            switch result {
+            case .success(let response):
+                if response.success {
+                    completion(true)
+                } else {
+                    if let error = response.error {
+                        self.errorMessage = error
+                        completion(false)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
 }
