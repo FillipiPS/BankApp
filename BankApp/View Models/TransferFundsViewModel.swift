@@ -12,6 +12,19 @@ class TransferFundsViewModel: ObservableObject {
     var toAccount: AccountViewModel?
     @Published var accounts = [AccountViewModel]()
 
+    var filterAccounts: [AccountViewModel] {
+        if self.fromAccount == nil {
+            return accounts
+        } else {
+            return accounts.filter {
+                guard let fromAccount = self.fromAccount else {
+                    return false
+                }
+                return $0.accountId != fromAccount.accountId
+            }
+        }
+    }
+
     var fromAccountType: String {
         fromAccount != nil ? fromAccount!.accountType : ""
     }
