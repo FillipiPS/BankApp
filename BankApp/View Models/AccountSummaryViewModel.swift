@@ -15,7 +15,7 @@ class AccountSummaryViewModel: ObservableObject {
     }
 
     func getAllAccounts() {
-        AccountService.shared.getAllAccounts { (result) in
+        AccountService.shared.getAllAccounts { result in
             switch result {
             case .success(let accounts):
                 if let accounts = accounts {

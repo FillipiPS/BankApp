@@ -53,7 +53,7 @@ extension AddAccountViewModel {
         }
 
         let createAccountReq = CreateAccountRequest(name: name, accountType: accountType.rawValue, balance: Double(balance)!)
-        AccountService.shared.createAccount(createAccountRequest: createAccountReq) { (result) in
+        AccountService.shared.createAccount(createAccountRequest: createAccountReq) { result in
             switch result {
             case .success(let response):
                 if response.success {

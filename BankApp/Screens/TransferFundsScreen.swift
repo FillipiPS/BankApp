@@ -13,7 +13,7 @@ struct TransferFundsScreen: View {
     @State private var isFromAccount = false
 
     var actionSheetButtons: [Alert.Button] {
-        var actionBButtons = self.transferFundsVM.filterAccounts.map { (account) in
+        var actionBButtons = self.transferFundsVM.filterAccounts.map { account in
             Alert.Button.default(Text("\(account.name) (\(account.accountType))")) {
                 if self.isFromAccount {
                     self.transferFundsVM.fromAccount = account

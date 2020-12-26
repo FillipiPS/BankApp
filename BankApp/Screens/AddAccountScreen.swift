@@ -23,7 +23,7 @@ struct AddAccountScreen: View {
             HStack {
                 Spacer()
                 Button("Submit") {
-                    self.addCountVM.createAccount { (success) in
+                    self.addCountVM.createAccount { success in
                         if success {
                             self.presentationMode.wrappedValue.dismiss()
                         }

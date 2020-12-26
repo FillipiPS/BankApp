@@ -57,13 +57,13 @@ class TransferFundsViewModel: ObservableObject {
         }
 
         let transferFundRequest = TransferFundRequest(accountFromId: fromAccount.accountId, accountToId: toAccount.accountId, amount: amount)
-        AccountService.shared.transferFunds(transferFundRequest: transferFundRequest) { (result) in
+        AccountService.shared.transferFunds(transferFundRequest: transferFundRequest) { result in
             
         }
     }
 
     func populateAccounts() {
-        AccountService.shared.getAllAccounts { (result) in
+        AccountService.shared.getAllAccounts { result in
             switch result {
             case .success(let accounts):
                 if let accounts = accounts {
