@@ -8,9 +8,11 @@
 import Foundation
 
 class TransferFundsViewModel: ObservableObject {
+    @Published var accounts = [AccountViewModel]()
+    @Published var message: String?
+
     var fromAccount: AccountViewModel?
     var toAccount: AccountViewModel?
-    @Published var accounts = [AccountViewModel]()
     var amount = ""
     var isAmountValid: Bool {
         guard let userAmount = Double(amount) else {
@@ -45,7 +47,7 @@ class TransferFundsViewModel: ObservableObject {
         return isAmountValid
     }
 
-    func submitTransfer() {
+    func submitTransfer(completion: @escaping () -> Void) {
         if !isValid() {
             return
         }
@@ -56,9 +58,18 @@ class TransferFundsViewModel: ObservableObject {
             return
         }
 
-        let transferFundRequest = TransferFundRequest(accountFromId: fromAccount.accountId, accountToId: toAccount.accountId, amount: amount)
+        let transferFundRequest = TransferFundRequest(accountFromId: fromAccount.accountId.lowercased(), accountToId: toAccount.accountId.lowercased(), amount: amount)
         AccountService.shared.transferFunds(transferFundRequest: transferFundRequest) { result in
-            
+            switch result {
+            case .success(let response):
+                if response.success {
+                    completion()
+                } else {
+                    self.message = response.error
+                }
+            case .failure(let error):
+                self.message = error.localizedDescription
+            }
         }
     }
 
