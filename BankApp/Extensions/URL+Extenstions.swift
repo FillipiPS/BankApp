@@ -15,4 +15,8 @@ extension URL {
     static func urlForCreateAccounts() -> URL? {
         return URL(string: "https://raspy-fossil-basilisk.glitch.me/api/accounts")
     }
+
+    static func urlForTranferFunds() -> URL? {
+        return URL(string: "https://raspy-fossil-basilisk.glitch.me/api/transfer")
+    }
 }
