@@ -31,15 +31,18 @@ struct TransferFundsScreen: View {
             AccountListView(accounts: transferFundsVM.accounts)
                 .frame(height: 300)
             TransferFundsAccountSelectionView(transferFundsVM: transferFundsVM, showSheet: $showSheet, isFromAccount: $isFromAccount)
-                Spacer()
+            Spacer()
 
                 .onAppear(perform: {
                     transferFundsVM.populateAccounts()
-            })
+                })
+            Button("Submit Transfer") {
+                
+            }.padding()
 
-                    .actionSheet(isPresented: $showSheet, content: {
-                        ActionSheet(title: Text("Transfer Funds"), message: Text("Choose an account"), buttons: self.actionSheetButtons)
-                    })
+            .actionSheet(isPresented: $showSheet, content: {
+                ActionSheet(title: Text("Transfer Funds"), message: Text("Choose an account"), buttons: self.actionSheetButtons)
+            })
         }.navigationBarTitle("Transfer Funds")
         .embedInNavigationView()
     }
@@ -77,6 +80,9 @@ struct TransferFundsAccountSelectionView: View {
             .foregroundColor(.white)
             .opacity(self.transferFundsVM.fromAccount != nil ? 1.0 : 0.5)
             .disabled(self.transferFundsVM.fromAccount == nil )
+
+            TextField("Amount", text: self.$transferFundsVM.amount)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
     }
 }
