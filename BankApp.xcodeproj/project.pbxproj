@@ -24,6 +24,7 @@
 		5B6916882592CB7B00556AAB /* CreateAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6916872592CB7B00556AAB /* CreateAccountResponse.swift */; };
 		5B786F4625940DA300DD8136 /* AddAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B786F4525940DA300DD8136 /* AddAccountScreen.swift */; };
 		5B8E9BBE25937D83002D9DE0 /* AddAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E9BBD25937D83002D9DE0 /* AddAccountViewModel.swift */; };
+		5BCEAA8A2597FCF200941483 /* TransferFundsAccountSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEAA892597FCF200941483 /* TransferFundsAccountSelectionView.swift */; };
 		5BEF1321259221CE00AFF87F /* AccountSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF1320259221CE00AFF87F /* AccountSummaryScreen.swift */; };
 		5BEF1326259226CB00AFF87F /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF1325259226CB00AFF87F /* AccountListView.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		5B6916872592CB7B00556AAB /* CreateAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountResponse.swift; sourceTree = "<group>"; };
 		5B786F4525940DA300DD8136 /* AddAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountScreen.swift; sourceTree = "<group>"; };
 		5B8E9BBD25937D83002D9DE0 /* AddAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewModel.swift; sourceTree = "<group>"; };
+		5BCEAA892597FCF200941483 /* TransferFundsAccountSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFundsAccountSelectionView.swift; sourceTree = "<group>"; };
 		5BEF1320259221CE00AFF87F /* AccountSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryScreen.swift; sourceTree = "<group>"; };
 		5BEF1325259226CB00AFF87F /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				5BEF1325259226CB00AFF87F /* AccountListView.swift */,
+				5BCEAA892597FCF200941483 /* TransferFundsAccountSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				5B6916882592CB7B00556AAB /* CreateAccountResponse.swift in Sources */,
 				5B45547D25916F3500433AC6 /* View+Extension.swift in Sources */,
 				5B8E9BBE25937D83002D9DE0 /* AddAccountViewModel.swift in Sources */,
+				5BCEAA8A2597FCF200941483 /* TransferFundsAccountSelectionView.swift in Sources */,
 				5B17234B2596B8F900C277BF /* TransferFundsViewModel.swift in Sources */,
 				5B45547A25916E1600433AC6 /* URL+Extenstions.swift in Sources */,
 				5B45546625915E5C00433AC6 /* BankAppApp.swift in Sources */,

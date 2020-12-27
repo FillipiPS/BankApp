@@ -28,26 +28,29 @@ struct TransferFundsScreen: View {
     }
 
     var body: some View {
-        VStack {
-            AccountListView(accounts: transferFundsVM.accounts)
-                .frame(height: 300)
-            TransferFundsAccountSelectionView(transferFundsVM: transferFundsVM, showSheet: $showSheet, isFromAccount: $isFromAccount)
-            Spacer()
-
-                .onAppear(perform: {
-                    transferFundsVM.populateAccounts()
+        ScrollView {
+            VStack {
+                AccountListView(accounts: transferFundsVM.accounts)
+                    .frame(height: 200)
+                TransferFundsAccountSelectionView(transferFundsVM: transferFundsVM, showSheet: $showSheet, isFromAccount: $isFromAccount)
+                Spacer()
+                    
+                    .onAppear(perform: {
+                        transferFundsVM.populateAccounts()
+                    })
+                Text(self.transferFundsVM.message ?? "")
+                Button("Submit Transfer") {
+                    self.transferFundsVM.submitTransfer {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }.padding()
+                
+                .actionSheet(isPresented: $showSheet, content: {
+                    ActionSheet(title: Text("Transfer Funds"), message: Text("Choose an account"), buttons: self.actionSheetButtons)
                 })
-            Text(self.transferFundsVM.message ?? "")
-            Button("Submit Transfer") {
-                self.transferFundsVM.submitTransfer {
-                    self.presentationMode.wrappedValue.dismiss()
-                }
-            }.padding()
-
-            .actionSheet(isPresented: $showSheet, content: {
-                ActionSheet(title: Text("Transfer Funds"), message: Text("Choose an account"), buttons: self.actionSheetButtons)
-            })
-        }.navigationBarTitle("Transfer Funds")
+            }
+        }
+        .navigationBarTitle("Transfer Funds")
         .embedInNavigationView()
     }
 }
@@ -55,38 +58,5 @@ struct TransferFundsScreen: View {
 struct TransferFundsScreen_Previews: PreviewProvider {
     static var previews: some View {
         TransferFundsScreen()
-    }
-}
-
-struct TransferFundsAccountSelectionView: View {
-    @ObservedObject var transferFundsVM: TransferFundsViewModel
-    @Binding var showSheet: Bool
-    @Binding var isFromAccount: Bool
-
-    var body: some View {
-        VStack(spacing: 10) {
-            Button("From \(self.transferFundsVM.fromAccountType)") {
-                self.isFromAccount = true
-                self.showSheet = true
-            }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.green)
-            .foregroundColor(.white)
-
-            Button("To \(self.transferFundsVM.toAccountType)") {
-                self.isFromAccount = false
-                self.showSheet = true
-            }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.green)
-            .foregroundColor(.white)
-            .opacity(self.transferFundsVM.fromAccount != nil ? 1.0 : 0.5)
-            .disabled(self.transferFundsVM.fromAccount == nil )
-
-            TextField("Amount", text: self.$transferFundsVM.amount)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-        }.padding()
     }
 }
